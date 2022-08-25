@@ -1,0 +1,34 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+.navbar {
+  background-color: $dark-color;
+  padding: $containerP;
+  padding-top: 1.2rem;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.5);
+
+  @include flexRowBetween;
+  a {
+    img {
+      width: 15rem;
+    }
+  }
+
+  .links {
+    @include flexRowBetween;
+    gap: 1.6rem;
+    list-style-type: none;
+    padding-right: 5rem;
+    li {
+      color: $text-color;
+      font-size: 1.4rem;
+      font-weight: 500;
+
+      &:hover {
+        color: $primary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

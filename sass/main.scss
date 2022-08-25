@@ -1,9 +1,10 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+@use "custom" as *;
 
-h1 {
-  color: orangered;
-}
+// @use "../sass/sections/_navbar";
+
+@use "sections/_navbar";
+@use "components/mixins";
+@use "sections/hero";
+// .navbar {
+//   background-color: black;
+// }

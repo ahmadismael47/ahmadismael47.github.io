@@ -1,9 +1,132 @@
+@import "/node_modules/@fontsource/permanent-marker/index.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-h1 {
-  color: orangered;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background-color: #151515;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+a:link, a:visited, a:focus, a:active {
+  color: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  padding: 1.6rem 5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: #151515;
+  padding: 1.6rem 5rem;
+  padding-top: 1.2rem;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1px 1px -1px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a img {
+  width: 15rem;
+}
+.navbar .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+  list-style-type: none;
+  padding-right: 5rem;
+}
+.navbar .links li {
+  color: #f4f4f4;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.navbar .links li:hover {
+  color: #51e8ef;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  min-height: 100vh;
+  padding-top: 6.4rem;
+}
+.hero .hero-text-box {
+  width: 100%;
+  border: 1px solid #f4f4f4;
+  padding: 3.2rem 1.6rem;
+}
+.hero .hero-text-box span {
+  font-size: 3.6rem;
+  color: #f4f4f4;
+  line-height: 1;
+}
+.hero .hero-text-box .hero-title {
+  font-size: 6.4rem;
+  font-family: Permanent Marker, sans, serif;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: #51e8ef;
+  line-height: 1.2;
+}
+.hero .hero-text-box p {
+  color: #f4f4f4;
+  font-weight: 300;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.hero .hero-text-box .cta {
+  padding: 1.6rem 0;
+  display: flex;
+  gap: 3.2rem;
+}
+.hero .hero-text-box .cta a {
+  border: solid #51e8ef;
+  font-size: 1.7rem;
+  border-width: 0 0 2px;
+}
+.hero .hero-text-box .cta .btn-hero {
+  background-color: #ef5851;
+  color: #f4f4f4;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.hero .hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.hero .hero-img img {
+  width: 60%;
+  min-height: 100%;
 }/*# sourceMappingURL=main.css.map */
