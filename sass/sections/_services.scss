@@ -1,0 +1,127 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+// &-2 {
+//   position: absolute;
+//   top: 30%;
+//   width: clamp(40rem, 100%, 100rem);
+//   margin-top: 15%;
+
+//   &--box {
+//     @include flex;
+//     flex-direction: column;
+//     border: 1px solid $border-color;
+//     background-color: rgba(0, 0, 0, 0.35);
+//     padding: 1.6rem;
+//     gap: 2.4rem;
+
+//     &_texts {
+//       &_title {
+//         font-size: 4rem;
+//         color: $text-color;
+//       }
+//     }
+
+//     &_cards {
+//       display: flex;
+//       justify-content: space-between;
+//       width: 100%;
+//       gap: 1.6rem;
+//       color: $text-color;
+//       &_card {
+//         background-color: rgba(68, 68, 68, 0.8);
+//         text-align: center;
+//         border-radius: 5px;
+//         padding: 1rem;
+//         width: 100%;
+//         .card-title {
+//           margin-top: 1rem;
+//           font-size: 1.8rem;
+//         }
+//         .card-content {
+//           margin-top: 1rem;
+//           font-size: 1.4rem;
+//           font-weight: 300;
+//           text-align: start;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.services {
+  @include flexCenter;
+  position: absolute;
+  top: 60%;
+  .services-box {
+    @include flexCenter;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 15rem;
+
+    .heading-services {
+      margin-bottom: 6.6rem;
+    }
+    &_offer {
+      @include flexCenter;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.35);
+      width: clamp(40rem, 95%, 100rem);
+      border: 1px solid $border-color;
+      padding: 1.6rem;
+      gap: 2.4rem;
+      position: relative;
+      .tab-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1.6rem;
+        position: absolute;
+        top: 0%;
+        .tab {
+          transform: translateY(-50%);
+          width: 150px; ////////////////////////////////remove later
+          padding: 1rem 3.6rem;
+          font-size: 1.7rem;
+          font-weight: 600;
+          &--1 {
+            background-color: $primary-color;
+          }
+          &--2 {
+            background-color: $secondary-color;
+          }
+
+          &--active {
+            transform: translateY(-4.2rem);
+          }
+        }
+      }
+      .content-container {
+        .content {
+          display: none;
+
+          &--active {
+            display: flex;
+          }
+
+          &-texts {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: $text-color;
+
+            .content-header {
+              font-size: 4rem;
+            }
+            p {
+              margin-top: 1rem;
+              font-size: 1.4rem;
+              font-weight: 300;
+              text-align: start;
+              line-height: 1.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

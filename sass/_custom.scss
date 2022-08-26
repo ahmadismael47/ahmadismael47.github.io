@@ -57,7 +57,10 @@ a {
   border: none;
   outline: none;
   border-radius: 5px;
+  font-family: $poppins;
+  letter-spacing: 1px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .btn_link {
   border: solid $primary-color;
@@ -79,6 +82,10 @@ a {
   color: $primary-color;
   text-align: center;
 }
+p {
+  letter-spacing: 2px;
+}
+
 //@at-root
 // @import "../../node_modules/@fontsource/permanent-marker/index.css";
 @import url("//fonts.cdnfonts.com/css/permanent-marker");
