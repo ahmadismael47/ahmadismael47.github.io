@@ -6,7 +6,9 @@
   gap: 1.6rem;
   min-height: 100vh;
   padding-top: 6.4rem;
+
   .hero-text-box {
+    // width: clamp(40rem, 100%, 100rem);
     width: 100%;
     border: 1px solid #f4f4f4;
     padding: 3.2rem 1.6rem;
@@ -18,7 +20,7 @@
     .hero-title {
       font-size: 6.4rem;
       font-family: $permanent;
-      letter-spacing: 1rem;
+      letter-spacing: 1.6rem;
       text-transform: uppercase;
       color: $primary-color;
       line-height: 1.2;
@@ -34,11 +36,6 @@
       padding: 1.6rem 0;
       display: flex;
       gap: 3.2rem;
-      a {
-        border: solid $primary-color;
-        font-size: 1.7rem;
-        border-width: 0 0 2px;
-      }
 
       .btn-hero {
         background-color: $secondary-color;
@@ -54,10 +51,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-
     img {
-      width: 60%;
-      min-height: 100%;
+      // width: 60%;
+      width: clamp(40rem, 80%, 50rem);
     }
   }
 }

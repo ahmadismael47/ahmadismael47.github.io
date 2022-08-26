@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
 }
+//colors
 
 $primary-color: #51e8ef;
 $secondary-color: #ef5851;
@@ -11,12 +12,22 @@ $text-color: #f4f4f4;
 $permanent: Permanent Marker, sans, serif;
 $poppins: Poppins, sans-serif;
 $containerP: 1.6rem 5rem;
+$border-color: #f4f4f4;
+
+// breakpoints
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxx: 1763px;
 html {
   font-size: 62.5%;
 }
 body {
   font-family: $poppins;
   background-color: $dark-color;
+  width: 100%;
 }
 // GENERAL
 h1,
@@ -46,8 +57,28 @@ a {
   border: none;
   outline: none;
   border-radius: 5px;
+  cursor: pointer;
 }
-
+.btn_link {
+  border: solid $primary-color;
+  font-size: 1.7rem;
+  border-width: 0 0 2px;
+}
+.primary-heading {
+  font-size: 6.4rem;
+  font-family: $permanent;
+  letter-spacing: 1.6rem;
+  text-transform: uppercase;
+  color: $primary-color;
+  line-height: 1.2;
+}
+.secondary-heading {
+  font-size: 4.4rem;
+  font-family: $permanent;
+  letter-spacing: 1.2rem;
+  color: $primary-color;
+  text-align: center;
+}
 //@at-root
 // @import "../../node_modules/@fontsource/permanent-marker/index.css";
 @import url("//fonts.cdnfonts.com/css/permanent-marker");
