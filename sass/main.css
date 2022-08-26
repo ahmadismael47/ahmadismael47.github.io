@@ -179,7 +179,7 @@ a:link, a:visited, a:focus, a:active {
 }
 .main .about-1--box {
   border: 1px solid #f4f4f4;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.35);
   padding: 1.6rem;
   display: flex;
   gap: 2.4rem;
