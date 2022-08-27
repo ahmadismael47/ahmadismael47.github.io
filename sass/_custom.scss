@@ -11,7 +11,7 @@ $dark-color: #151515;
 $text-color: #f4f4f4;
 $permanent: Permanent Marker, sans, serif;
 $poppins: Poppins, sans-serif;
-$containerP: 1.6rem 5rem;
+$containerP: 1.6rem;
 $border-color: #f4f4f4;
 
 // breakpoints
@@ -23,6 +23,7 @@ $xxl: 1400px;
 $xxx: 1763px;
 html {
   font-size: 62.5%;
+  background-color: red;
 }
 body {
   font-family: $poppins;
