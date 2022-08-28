@@ -5,14 +5,15 @@
 }
 //colors
 
-$primary-color: #51e8ef;
+// $primary-color: #51e8ef;
+$primary-color: #57c4cd;
 $secondary-color: #ef5851;
 $dark-color: #151515;
 $text-color: #f4f4f4;
 $permanent: Permanent Marker, sans, serif;
 $poppins: Poppins, sans-serif;
 $containerP: 1.6rem;
-$border-color: #f4f4f4;
+$border-color: rgba(244, 244, 244, 0.4);
 
 // breakpoints
 $sm: 576px;
@@ -23,7 +24,6 @@ $xxl: 1400px;
 $xxx: 1763px;
 html {
   font-size: 62.5%;
-  background-color: red;
 }
 body {
   font-family: $poppins;

@@ -1,18 +1,8 @@
 import { navLinks } from "./assets/dummyData.js"
+import { rendNavbar } from "./components/navbar.js"
 /////////////////////////////////////////NAV LINKS
-
-const linkContainer = document.querySelector(".navbar")
-const link = document.createElement("ul")
-
-link.innerHTML = navLinks
-  .map((item) => {
-    const { name, path, icon, id } = item
-    return ` <li><i class="${icon}"></i><a href="${path}">${name}</a></li>`
-  })
-  .join("")
-
-link.classList.add("links")
-linkContainer.append(link)
+rendNavbar()
+///////////////////////////////////////////nav nav nav end end end
 
 //////////////////////////////TABS TABS TABS TABS TABS
 let tabs = document.querySelectorAll(".tab")
@@ -31,6 +21,7 @@ tabContainer.addEventListener("click", function (event) {
     .querySelector(`.content--${clicked.dataset.tab}`)
     .classList.add("content--active")
 })
+//////////////////////////////TABS TABS TABS END END END
 
 /////////////////////////////////SLIDE SLIDE SLIDE SLIDE
 

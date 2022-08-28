@@ -1,144 +1,83 @@
 @use "../custom" as *;
 @use "../components/mixins" as *;
 
-.products {
-  position: absolute;
-  top: 80%;
-
-  .featured-products {
+.product {
+  @include flexCenter;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15rem;
+  width: 100%;
+  color: $text-color;
+  &-hero {
     @include flexCenter;
-    align-items: center;
-    flex-direction: column;
-    .products-heading {
-      font-family: $poppins;
-      color: $text-color;
-      font-size: 2.4rem;
-      line-height: 1;
-      letter-spacing: 3px;
+    padding: 1rem;
+    gap: 1.6rem;
+    width: 90%;
+    .product-hero_left {
+      width: 50%;
+    }
+    .product-hero_right {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      width: 50%;
+    }
+    img {
+      width: 100%;
+    }
+
+    .circle {
+      height: clamp(5rem, 20%, 12rem);
+      width: clamp(5rem, 20%, 12rem);
+      opacity: 0.8;
+      border-radius: 50%;
+      position: absolute;
+      //   background-color: $primary-color;
+      background-color: $secondary-color;
+
       &::before {
-        content: "";
-        position: absolute;
-        top: 5%;
-        opacity: 0.3;
-        width: 32rem;
-        height: 1rem;
-        background-color: $primary-color;
+        content: "Pesti shop";
+        font-size: 2.4rem;
+        font-weight: 600;
+        @include absoluteCenter;
       }
     }
-    .products-subheading {
-      font-size: 1.8rem;
-      color: $text-color;
-      font-weight: 400;
-    }
+  }
 
-    &--box {
-      @include flexCenter;
-      background-color: rgba(0, 0, 0, 0.35);
-      flex-direction: column;
-      width: clamp(40rem, 70%, 100rem);
-      border: 1px solid $border-color;
-      padding: 1.6rem;
-      gap: 1.6rem;
-      position: relative;
-      overflow-x: hidden;
+  &-feature {
+    width: 90%;
 
-      .slider {
+    &_cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 1rem;
+      .card {
         @include flexCenter;
-        max-width: 100rem;
-        min-height: 47rem;
-        &::before {
-          content: "\201F";
-          position: absolute;
-          bottom: 0;
-          left: 5%;
-          font-size: 17rem;
-          color: $secondary-color;
-          z-index: -1;
-          opacity: 0.4;
-        }
-        .slider_btn--left {
-          position: absolute;
-          left: 0%;
-        }
-        .slider_btn--right {
-          position: absolute;
-          z-index: 1;
-          right: 0%;
-        }
-        .slide {
-          @include flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          height: 45rem;
-          width: 80%;
-          transition: all 0.5s;
-
-          &-customer {
-            @include flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 1.6rem;
-            color: $text-color;
-
-            h4 {
-              font-size: 2.4rem;
-              letter-spacing: 1.7px;
-              font-weight: 600;
-            }
-            span {
-              margin-top: -1rem;
-              font-size: 1.3rem;
-              font-weight: 500;
-            }
-            blockquote {
-              font-size: 1.4rem;
-              font-weight: 300;
-              text-align: start;
-              line-height: 1.5;
-            }
-          }
-        }
-        .slider_btn--right {
-          background-color: transparent;
-        }
-        .slider_btn--left {
-          background-color: transparent;
-        }
-        i {
-          color: $primary-color;
-          font-size: 5rem;
-          opacity: 0.25;
-
-          &:hover {
-            opacity: 0.5;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: rgba(0, 0, 0, 0.45);
+        min-height: 15rem;
+        padding: 1.6rem;
+        border: 1px solid $border-color;
+        &--icon {
+          border-radius: 50%;
+          filter: grayscale(0.4);
+          i {
+            font-size: 3rem;
+            color: $primary-color;
           }
         }
 
-        .dots {
-          position: absolute;
-          left: 15%;
-          top: 75%;
-          .dots_dot {
-            border: none;
-            background-color: #b9b9b9;
-            opacity: 0.7;
-            height: 1rem;
-            width: 1rem;
-            border-radius: 50%;
-            margin-right: 1.75rem;
-            cursor: pointer;
-            transition: all 0.5s;
+        h4 {
+          font-size: 1.7rem;
+          font-weight: 300;
+        }
 
-            /* Only necessary when overlying images */
-            /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
-          }
-          .dots_dot--active {
-            background-color: $secondary-color;
-            /* background-color: #888; */
-            opacity: 1;
-          }
+        &--mid-up {
+          text-align: center;
+        }
+        &--mid-bot {
+          text-align: center;
         }
       }
     }

@@ -20,7 +20,7 @@ export const navLinks = [
   {
     id: 4,
     name: "Products",
-    path: "/",
+    path: "/pages/products.html",
     icon: "fa-solid fa-store",
   },
 ]
