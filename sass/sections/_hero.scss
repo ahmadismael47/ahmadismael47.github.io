@@ -43,6 +43,7 @@
         color: $text-color;
         font-weight: 700;
         font-size: 1.8rem;
+        @include onHover;
       }
     }
   }

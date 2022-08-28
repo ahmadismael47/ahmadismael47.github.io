@@ -31,18 +31,13 @@
         top: 0%;
         .tab {
           transform: translateY(-50%);
-          width: 150px; ////////////////////////////////remove later
+          width: 170px; ////////////////////////////////remove later
           padding: 1rem 3.6rem;
           font-size: 1.7rem;
           font-weight: 600;
-          &--1 {
-            background-color: $primary-color;
-          }
-          &--2 {
-            background-color: $secondary-color;
-          }
-
+          background-color: $primary-color;
           &--active {
+            background-color: $secondary-color;
             transform: translateY(-4.2rem);
           }
         }

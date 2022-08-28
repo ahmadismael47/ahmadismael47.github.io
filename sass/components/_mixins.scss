@@ -19,3 +19,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin onHover {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+@mixin blurry {
+  filter: blur(0.2rem);
+}

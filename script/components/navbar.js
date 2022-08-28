@@ -1,4 +1,5 @@
 import { navLinks } from "../assets/dummyData.js"
+/////////////////////////////////////////NAV LINKS
 export const rendNavbar = () => {
   const linkContainer = document.querySelector(".navbar")
   const link = document.createElement("ul")
