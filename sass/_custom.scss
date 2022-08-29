@@ -18,14 +18,21 @@ $containerP: 1.6rem;
 $border-color: rgba(244, 244, 244, 0.4);
 
 // breakpoints
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
-$xxx: 1763px;
+// $breakpoints: (
+//   "phone": 360px,
+//   "table": 768px,
+//   "desktop": 1336px,
+//   "lgDesktop": 1920px,
+// ) !default;
+
 html {
   font-size: 62.5%;
+  @include breakpoint(968px) {
+    font-size: 9px;
+  }
+  @include sm {
+    font-size: 7px;
+  }
 }
 body {
   font-family: $poppins;

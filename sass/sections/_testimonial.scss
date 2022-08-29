@@ -36,7 +36,10 @@
       @include flexCenter;
       background-color: rgba(0, 0, 0, 0.35);
       flex-direction: column;
-      width: clamp(40rem, 70%, 100rem);
+      width: clamp(40rem, 90%, 100rem);
+      @include md {
+        width: 100%;
+      }
       border: 1px solid $border-color;
       padding: 1.6rem;
       gap: 1.6rem;
@@ -121,7 +124,7 @@
         .dots {
           position: absolute;
           left: 10%;
-          top: 75%;
+          top: 20%;
 
           .dots_dot {
             border: none;
@@ -144,6 +147,17 @@
           }
         }
       }
+    }
+  }
+
+  @include breakpoint(1100px) {
+    top: 75%;
+  }
+  @include md {
+    top: 60%;
+    width: 100%;
+    img {
+      width: 50%;
     }
   }
 }

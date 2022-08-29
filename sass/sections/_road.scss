@@ -2,23 +2,18 @@
 @use "../components/mixins" as *;
 
 .main {
-  //   position: relative;
-  //   background: url(/assets/images/road.svg);
-  //   background-size: auto;
-  //   background-position: center -100mm;
-  //   background-repeat: no-repeat;
   width: 100%;
   overflow: hidden;
   min-height: 660vh;
-  //   @media only screen and (max-width: $xxl) {
-  //     background: url("");
-  //   }
   position: relative;
+
   .road {
     width: 100%;
     margin-top: -10%;
-
     transform: scale(1.17);
+    @include breakpoint(1024px) {
+      display: none;
+    }
   }
   .about {
     @include flexCenter;
@@ -29,8 +24,6 @@
       margin-top: 20%;
       .secondary-heading-about {
         margin-bottom: 5rem;
-      }
-      @media only screen and (min-width: $xl) {
       }
 
       &--box {
@@ -59,6 +52,15 @@
           font-size: 1.8rem;
           align-self: flex-start;
           letter-spacing: 0.8rem;
+        }
+        @include md {
+          padding: 0.5rem;
+          &_title {
+            font-size: 3.6rem;
+          }
+          &_description {
+            width: 100%;
+          }
         }
       }
     }
@@ -111,5 +113,47 @@
         }
       }
     }
+
+    @include breakpoint(1200px) {
+      &-1 {
+        margin-top: 0%;
+      }
+      &-2 {
+        margin-top: 0%;
+        top: 25%;
+      }
+    }
+    @include md {
+      &-1 {
+        margin-top: 0%;
+      }
+      &-2 {
+        margin-top: 0%;
+        display: none;
+      }
+    }
+    @include sm {
+      &-1 {
+        &--box {
+          flex-direction: column;
+          align-items: center;
+          gap: 0rem;
+          img {
+            width: 50%;
+          }
+
+          .about-1-box_texts {
+            padding: 1.6rem;
+          }
+        }
+      }
+      &-2 {
+        margin-top: 0%;
+        display: none;
+      }
+    }
+  }
+  @include md {
+    min-height: 350vh;
   }
 }
