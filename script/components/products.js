@@ -34,7 +34,7 @@ const allCatBtn = document.querySelector(".btn--all")
 const qwerty = document.querySelectorAll(".qwerty")
 const equipments = document.querySelectorAll(".equipment")
 const btnCont = document.querySelectorAll(".products-btn")
-
+const addToCartBtnCont = document.querySelectorAll(".product-info")
 const removeActive = () => {
   btnCont.forEach((b) => b.classList.remove("tab--active"))
 }
@@ -65,6 +65,21 @@ const renderAll = () => {
   allCatBtn.classList.add("tab--active")
 }
 
+let counts = 0
+const span = document.createElement("span")
+const cart = document.querySelector(".cart")
+const addToCarty = (e) => {
+  counts++
+
+  span.innerHTML = `${counts}`
+  cart.append(span)
+}
+const openCart = () => {
+  cart.classList.toggle("overlay")
+}
+cart.addEventListener("click", openCart)
+
+addToCartBtnCont.forEach((btn) => btn.addEventListener("click", addToCarty))
 equipBtn.addEventListener("click", renderEquipments)
 allCatBtn.addEventListener("click", renderAll)
 lason.addEventListener("click", renderLason)
