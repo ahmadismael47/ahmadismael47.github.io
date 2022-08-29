@@ -67,4 +67,15 @@
       }
     }
   }
+
+  @include md {
+    flex-direction: column;
+
+    &-img {
+      width: 100%;
+    }
+    form {
+      width: 100%;
+    }
+  }
 }

@@ -71,6 +71,7 @@ a {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.5s;
+  z-index: 10;
 }
 .btn_link {
   border: solid $primary-color;

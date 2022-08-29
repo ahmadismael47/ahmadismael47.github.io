@@ -55,6 +55,7 @@ a:link, a:visited, a:focus, a:active {
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.5s;
+  z-index: 10;
 }
 
 .btn_link {
@@ -104,9 +105,15 @@ p {
   gap: 3.6rem;
   list-style-type: none;
 }
-@media (max-width: 550px) {
+@media (max-width: 768px) {
   .navbar .links {
-    display: none;
+    padding: 5rem;
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    transform: translateX(100%);
+    width: 15rem;
+    transition: all 0.4s linear;
   }
 }
 .navbar .links li {
@@ -125,6 +132,39 @@ p {
 .navbar .links li a:hover {
   color: #57c4cd;
   cursor: pointer;
+}
+.navbar .active-side {
+  transform: translateX(0);
+}
+.navbar .hamburger {
+  margin-right: 3.2rem;
+  z-index: 9999;
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar .hamburger {
+    display: inline-block;
+  }
+}
+.navbar .hamburger i {
+  font-size: 2.4rem;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+.navbar .hamburger i:hover {
+  color: #57c4cd;
+}
+.navbar .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
 }
 
 .hero {
@@ -748,6 +788,16 @@ p {
   justify-items: center;
   row-gap: 3.2rem;
 }
+@media (max-width: 1200px) {
+  .product-list_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .product-list_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .product-list_items-item {
   list-style-type: none;
   list-style: none;
@@ -761,11 +811,6 @@ p {
 }
 .product-list .none {
   display: none;
-}
-@media only screen and (max-width: 1200px) {
-  .product-list .product-list_items {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 .product-list_buttons {
   text-align: center;
@@ -782,6 +827,11 @@ p {
   font-weight: 700;
   background-color: #ef5851;
   color: #f4f4f4;
+}
+@media (max-width: 550px) {
+  .product-list_buttons .products-btn {
+    padding: 0.3rem 2rem;
+  }
 }
 .product-list_buttons .products-btn::-webkit-backdrop {
   position: absolute;
@@ -871,4 +921,15 @@ p {
 .price form .text-field-btn {
   color: #f4f4f4;
   background-color: #ef5851;
+}
+@media (max-width: 768px) {
+  .price {
+    flex-direction: column;
+  }
+  .price-img {
+    width: 100%;
+  }
+  .price form {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

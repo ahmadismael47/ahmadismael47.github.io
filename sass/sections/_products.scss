@@ -51,6 +51,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       padding: 1rem;
+
       .card {
         @include flexCenter;
         flex-direction: column;
@@ -100,7 +101,12 @@
       grid-template-columns: repeat(4, 1fr);
       justify-items: center;
       row-gap: 3.2rem;
-
+      @include breakpoint(1200px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include md {
+        grid-template-columns: repeat(2, 1fr);
+      }
       &-item {
         list-style-type: none;
         list-style: none;
@@ -123,17 +129,12 @@
       display: none;
     }
 
-    @media only screen and(max-width:1200px) {
-      .product-list_items {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
     &_buttons {
       text-align: center;
       transform: translateY(-100%);
       @include flexCenter;
       gap: 1.6rem;
+
       .products-btn {
         width: 170px;
         padding: 0.5rem 3.6rem;
@@ -141,6 +142,9 @@
         font-weight: 700;
         background-color: $secondary-color;
         color: $text-color;
+        @include sm {
+          padding: 0.3rem 2rem;
+        }
         &::backdrop {
           position: absolute;
           top: 50%;
