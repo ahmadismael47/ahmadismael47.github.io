@@ -160,4 +160,7 @@
       width: 50%;
     }
   }
+  @include sm {
+    top: 68%;
+  }
 }

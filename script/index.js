@@ -1,4 +1,3 @@
-import { navLinks } from "./assets/dummyData.js"
 import { rendNavbar } from "./components/navbar.js"
 /////////////////////////////////////////NAV LINKS
 rendNavbar()

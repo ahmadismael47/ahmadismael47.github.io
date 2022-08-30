@@ -75,7 +75,7 @@ const addToCarty = (e) => {
   cart.append(span)
 }
 const openCart = () => {
-  cart.classList.toggle("overlay")
+  cart.classList.toggle("overlay1")
 }
 cart.addEventListener("click", openCart)
 

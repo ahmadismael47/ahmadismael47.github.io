@@ -7,7 +7,7 @@ export const rendNavbar = () => {
   link.innerHTML = navLinks
     .map((item) => {
       const { name, path, icon, id } = item
-      return ` <li><i class="${icon}"></i><a href="${path}">${name}</a></li>`
+      return ` <li><i class="${icon}"></i><a  class="${name}" href="${path}">${name}</a></li>`
     })
     .join("")
 

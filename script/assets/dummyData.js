@@ -29,6 +29,12 @@ export const navLinks = [
     path: "/pages/products.html",
     icon: "fa-solid fa-store",
   },
+  {
+    id: 4,
+    name: "Login",
+    path: "#",
+    icon: "fa-solid fa-store",
+  },
 ]
 export const productsList = [
   {

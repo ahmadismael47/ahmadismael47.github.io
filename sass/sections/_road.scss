@@ -17,11 +17,22 @@
   }
   .about {
     @include flexCenter;
+
     &-1 {
       position: absolute;
       width: clamp(40rem, 95%, 100rem);
       top: 5%;
       margin-top: 20%;
+      hr {
+        height: 3rem;
+        width: 100%;
+        background-color: $primary-color;
+        border: none;
+        position: absolute;
+        top: 0%;
+        filter: blur(4rem);
+      }
+
       .secondary-heading-about {
         margin-bottom: 5rem;
       }
@@ -154,6 +165,6 @@
     }
   }
   @include md {
-    min-height: 350vh;
+    min-height: 250vh;
   }
 }

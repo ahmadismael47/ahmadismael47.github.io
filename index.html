@@ -10,7 +10,10 @@
     />
     <link rel="stylesheet" href="sass/main.css" />
     <script src="/script/index.js" type="module" defer></script>
+    <script src="/script/components/modal.js" type="module" defer></script>
+
     <title>Pesti</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
   </head>
   <body>
     <nav class="navbar">
@@ -36,7 +39,7 @@
           commercial pest control and removal services.
         </p>
         <div class="cta">
-          <a href="#" class="btn_link">Speak to our team</a>
+          <a href="/pages/prices.html" class="btn_link">Speak to our team</a>
           <button class="btn btn-hero">
             <a href="/pages/products.html">Our products</a>
           </button>
@@ -58,7 +61,9 @@
         alt="main road image"
       />
       <section class="container about">
+
         <div class="about-1">
+        <hr />
           <h2 class="secondary-heading secondary-heading-about">About us</h2>
           <div class="about-1--box">
             <img
@@ -134,8 +139,10 @@
         </div>
       </section>
       <section class="container services">
+        <hr /> 
         <div class="services-box">
           <h2 class="secondary-heading heading-services">Services</h2>
+   
           <div class="services-box_offer">
             <div class="tab-container">
               <button class="btn tab tab--1" data-tab="1">Ant</button>
@@ -288,5 +295,65 @@
         </div>
       </section>
     </main>
+    <hr />
+
+    <footer>
+      <div class="footer-items">
+        <img src="/assets/images/Logo container.svg" />
+        <div class="footer--1">
+          <h5 class="footer-title">Quick links</h5>
+          <hr />
+
+          <ul>
+            <li>Pesto control Services</li>
+            <li>Money-Back guarantee</li>
+            <li>Contact us</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="footer--1">
+          <h5 class="footer-title">Services</h5>
+          <hr />
+          <ul>
+            <li>Pesto control Services</li>
+            <li>Money-Back guarantee</li>
+            <li>Contact us</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="footer--1">
+          <h5 class="footer-title">Contact</h5>
+          <hr />
+
+          <ul>
+            <li>Address: 214 JJ Drive, San jose gusu Zamboanga city , PH</li>
+            <li>Telephone: 613-371-2158</li>
+            <li>Contact us</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- MODAAAAAAALLLL -->
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Create new account <br />
+     
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Sign up &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+    <!-- MOOODAAAALLL ENNDDD -->
   </body>
 </html>

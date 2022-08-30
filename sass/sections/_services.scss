@@ -5,6 +5,16 @@
   @include flexCenter;
   position: absolute;
   top: 60%;
+
+  hr {
+    height: 3rem;
+    width: 100%;
+    position: absolute;
+    top: -300%;
+    background-color: $primary-color;
+    border: none;
+    filter: blur(4rem);
+  }
   .services-box {
     @include flexCenter;
     flex-direction: column;
@@ -93,7 +103,7 @@
     }
   }
   @include sm {
-    top: 45%;
+    top: 50%;
     .content-container {
       .content {
         &--active {
