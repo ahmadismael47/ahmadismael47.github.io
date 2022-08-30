@@ -41,7 +41,7 @@ const createDots = function () {
 }
 createDots()
 
-const activeDot = function (slide) {
+const activeDot = (slide) => {
   document
     .querySelectorAll(".dots_dot")
     .forEach((dot) => dot.classList.remove("dots_dot--active"))
@@ -51,14 +51,14 @@ const activeDot = function (slide) {
     .classList.add("dots_dot--active")
 }
 
-const goToSlide = function (slide) {
+const goToSlide = (slide) => {
   slides.forEach((s, i) => {
     s.style.transform = `translateX(${150 * (i - slide)}%)`
   })
 }
 goToSlide(0)
 
-const nextSlide = function () {
+const nextSlide = () => {
   if (currentSlide === maxSlide - 1) {
     currentSlide = 0
   } else {
@@ -67,7 +67,7 @@ const nextSlide = function () {
   goToSlide(currentSlide)
   activeDot(currentSlide)
 }
-const prevSlide = function () {
+const prevSlide = () => {
   if (currentSlide === 0) {
     currentSlide = maxSlide - 1
   } else {

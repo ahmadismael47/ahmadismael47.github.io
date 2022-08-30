@@ -33,7 +33,7 @@ export const navLinks = [
     id: 4,
     name: "Login",
     path: "#",
-    icon: "fa-solid fa-store",
+    icon: "fa-solid fa-user",
   },
 ]
 export const productsList = [
